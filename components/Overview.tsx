@@ -14,9 +14,9 @@ export default function Overview() {
       </p>
 
       <h2 className="serif mb-4" style={{ fontSize: '3rem', lineHeight: 1.1 }}>
-        모노레포로
+        무엇이
         <br />
-        전환하기
+        달라졌죠?
       </h2>
       <p
         className="mb-16"
