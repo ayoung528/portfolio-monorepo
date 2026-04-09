@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero';
 import Problem from '@/components/Problem';
-import Solution from '@/components/Solution';
+import Overview from '@/components/Overview';
 import Process from '@/components/Process';
 import Result from '@/components/Result';
 import Learned from '@/components/Learned';
@@ -20,8 +20,8 @@ export default function Home() {
       <div id="problem">
         <Problem />
       </div>
-      <div id="solution">
-        <Solution />
+      <div id="overview">
+        <Overview />
       </div>
       <div id="process">
         <Process />

@@ -1,6 +1,6 @@
 import DependencyFlow from './DependencyFlow';
 
-export default function Solution() {
+export default function Overview() {
   return (
     <section
       className="px-16 py-20"
@@ -10,7 +10,7 @@ export default function Solution() {
         className="text-xs tracking-[0.2em] uppercase mb-8"
         style={{ color: 'var(--color-ink-faint)' }}
       >
-        Solution
+        Overview
       </p>
 
       <h2 className="serif mb-4" style={{ fontSize: '3rem', lineHeight: 1.1 }}>
