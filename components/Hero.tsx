@@ -36,11 +36,11 @@ export default function Hero() {
               fontSize: '1rem',
               color: 'var(--color-ink-muted)',
               lineHeight: 1.8,
-              maxWidth: '550px',
+              maxWidth: '630px',
             }}
           >
-            바쁜 업무를 끝내고 외면했던 모노레포로의 설계를 25년 12월 부터
-            시작했습니다.
+            지속적으로 증가하는 컴포넌트 라이브러리의 유지보수 비용과 개발
+            효율성 저하 문제를 해결하기 위해,
             <br /> 26년도 연구 과제로 지정하며 105 개의 컴포넌트 라이브러리를
             <br />
             멀티레포에서 모노레포로 전환한 과정과 결과를 공유합니다.
