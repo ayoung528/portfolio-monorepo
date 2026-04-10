@@ -1,7 +1,7 @@
 export default function Learned() {
   return (
     <section
-      className="px-16 py-20"
+      className="px-16 mob-px py-20 mob-py-sm"
       style={{ borderTop: '1px solid var(--color-border)' }}
     >
       <p
@@ -11,10 +11,10 @@ export default function Learned() {
         Learned
       </p>
 
-      <div className="flex gap-20 items-start">
-        <div style={{ flex: '0 0 320px' }}>
+      <div className="flex gap-20 items-start mob-stack">
+        <div className="mob-full" style={{ flex: '0 0 320px' }}>
           <h2
-            className="serif mb-6"
+            className="serif mb-6 mob-h2"
             style={{ fontSize: '3rem', lineHeight: 1.1 }}
           >
             배운 것들
@@ -32,7 +32,7 @@ export default function Learned() {
           </p>
         </div>
 
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 mob-full flex flex-col">
           {[
             {
               title: '불편함을 그냥 넘기지 않기',
@@ -40,7 +40,7 @@ export default function Learned() {
             },
             {
               title: '공유와 협업의 힘',
-              desc: '파트에 공유하면서 리더님의 한 마디, "명령어 하나로 peerDependencies 까지 설치해 주세요"가 초기 설치 비용을 크게 줄였습니다. 또한 버저닝 수립에 대해 동료들과 고민하면서 제품에 맞는 전략을 만들어 낼 수 있었습니다.',
+              desc: '파트에 공유하면서 리더님의 한 마디, "명령어 하나로 peerDependencies까지 설치해 주세요"가 초기 설치 비용을 크게 줄였습니다. 또한 버저닝 수립에 대해 동료들과 고민하면서 제품에 맞는 전략을 만들어 낼 수 있었습니다.',
             },
             {
               title: '문서화는 개발의 일부',

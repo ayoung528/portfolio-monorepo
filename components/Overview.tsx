@@ -3,7 +3,7 @@ import DependencyFlow from './DependencyFlow';
 export default function Overview() {
   return (
     <section
-      className="px-16 py-20"
+      className="px-16 mob-px py-20 mob-py-sm"
       style={{ borderTop: '1px solid var(--color-border)' }}
     >
       <p
@@ -13,7 +13,10 @@ export default function Overview() {
         Overview
       </p>
 
-      <h2 className="serif mb-4" style={{ fontSize: '3rem', lineHeight: 1.1 }}>
+      <h2
+        className="serif mb-4 mob-h2"
+        style={{ fontSize: '3rem', lineHeight: 1.1 }}
+      >
         무엇이
         <br />
         달라졌죠?
@@ -38,7 +41,6 @@ export default function Overview() {
         을 도입해 릴리즈 프로세스를 체계화했습니다.
       </p>
 
-      {/* 의존성 흐름도 */}
       <p
         className="text-xs tracking-[0.2em] uppercase mb-6 font-bold"
         style={{ color: 'var(--color-ink-faint)' }}

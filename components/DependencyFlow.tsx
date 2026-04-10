@@ -31,12 +31,7 @@ const moduleColors: Record<
   string,
   { bg: string; border: string; label: string; sub: string }
 > = {
-  blue: {
-    bg: '#EEF4FC',
-    border: '#B5D4F4',
-    label: '#0C447C',
-    sub: '#185FA5',
-  },
+  blue: { bg: '#EEF4FC', border: '#B5D4F4', label: '#0C447C', sub: '#185FA5' },
   purple: {
     bg: '#F3F2FE',
     border: '#CECBF6',
@@ -48,6 +43,7 @@ const moduleColors: Record<
 export default function DependencyFlow() {
   return (
     <div
+      className="mob-col1"
       style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}
     >
       {/* ── BEFORE ── */}
@@ -62,8 +58,6 @@ export default function DependencyFlow() {
         >
           BEFORE — 멀티레포
         </p>
-
-        {/* 라이브러리 */}
         <div
           style={{
             background: '#FDF1EE',
@@ -83,8 +77,6 @@ export default function DependencyFlow() {
             단일 번들 · 트리쉐이킹 없음
           </p>
         </div>
-
-        {/* 브랜치 두 개 */}
         <div
           style={{
             display: 'grid',
@@ -128,8 +120,6 @@ export default function DependencyFlow() {
             </div>
           ))}
         </div>
-
-        {/* 모듈 4개 */}
         <div
           style={{
             display: 'grid',
@@ -178,8 +168,6 @@ export default function DependencyFlow() {
             );
           })}
         </div>
-
-        {/* 문제 배지 */}
         <div
           style={{
             background: '#FCEBEB',
@@ -207,8 +195,6 @@ export default function DependencyFlow() {
         >
           AFTER — 모노레포
         </p>
-
-        {/* 루트 */}
         <div
           style={{
             background: '#E8F5F0',
@@ -228,9 +214,8 @@ export default function DependencyFlow() {
             Yarn Workspaces · Nx · Changesets
           </p>
         </div>
-
-        {/* 패키지 4개 */}
         <div
+          className="mob-col2"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
@@ -270,8 +255,6 @@ export default function DependencyFlow() {
             </div>
           ))}
         </div>
-
-        {/* peerDependencies 레이블 */}
         <p
           style={{
             fontSize: '0.7rem',
@@ -282,8 +265,6 @@ export default function DependencyFlow() {
         >
           peerDependencies로 버전 위임
         </p>
-
-        {/* 모듈 4개 */}
         <div
           style={{
             display: 'grid',
@@ -322,8 +303,6 @@ export default function DependencyFlow() {
             );
           })}
         </div>
-
-        {/* 해결 배지 두 개 */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {[
             '단일 소스 · React 버전 충돌 해소',

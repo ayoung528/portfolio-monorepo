@@ -35,7 +35,7 @@ export default function TechStack() {
   return (
     <>
       <section
-        className="px-16 py-20"
+        className="px-16 mob-px py-20 mob-py-sm"
         style={{ borderTop: '1px solid var(--color-border)' }}
       >
         <p
@@ -44,14 +44,12 @@ export default function TechStack() {
         >
           Tech Stack
         </p>
-
         <h2
-          className="serif mb-12"
+          className="serif mb-12 mob-h2"
           style={{ fontSize: '3rem', lineHeight: 1.1 }}
         >
           사용한 기술
         </h2>
-
         <div
           style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}
         >
@@ -74,7 +72,7 @@ export default function TechStack() {
                     className="rounded-xl px-5 py-4"
                     style={{
                       background: 'var(--color-surface)',
-                      minWidth: '160px',
+                      minWidth: '140px',
                     }}
                   >
                     <p
@@ -104,7 +102,7 @@ export default function TechStack() {
       </section>
 
       <footer
-        className="px-16 py-12 flex items-center justify-end"
+        className="px-16 mob-px py-12 flex items-center justify-end"
         style={{ borderTop: '1px solid var(--color-border)' }}
       >
         <p style={{ fontSize: '0.75rem', color: 'var(--color-ink-faint)' }}>

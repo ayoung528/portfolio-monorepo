@@ -22,10 +22,9 @@ const metrics = [
 
 export default function Result() {
   const maxVal = 420;
-
   return (
     <section
-      className="px-16 py-20"
+      className="px-16 mob-px py-20 mob-py-sm"
       style={{ borderTop: '1px solid var(--color-border)' }}
     >
       <p
@@ -35,11 +34,11 @@ export default function Result() {
         Result
       </p>
 
-      <div className="flex gap-20 items-start">
-        {/* 왼쪽: 강조 수치 */}
-        <div style={{ flex: '0 0 260px' }}>
+      <div className="flex gap-20 items-start mob-stack">
+        {/* 왼쪽 */}
+        <div className="mob-full" style={{ flex: '0 0 260px' }}>
           <h2
-            className="serif mb-3"
+            className="serif mb-3 mob-h2"
             style={{ fontSize: '3rem', lineHeight: 1.1 }}
           >
             번들 사이즈
@@ -56,7 +55,6 @@ export default function Result() {
           >
             트리쉐이킹 적용 전후, ERB 모듈의 실제 번들 사이즈 변화입니다.
           </p>
-
           <div
             className="rounded-2xl p-7"
             style={{ background: 'var(--color-surface)' }}
@@ -83,8 +81,8 @@ export default function Result() {
           </div>
         </div>
 
-        {/* 오른쪽: 바 차트 */}
-        <div className="flex-1 flex flex-col gap-10 pt-2">
+        {/* 오른쪽 */}
+        <div className="flex-1 mob-full flex flex-col gap-10 pt-2">
           {metrics.map(
             ({ label, before, after, unit, change, positive, note }) => (
               <div key={label}>
@@ -124,8 +122,6 @@ export default function Result() {
                     )}
                   </div>
                 </div>
-
-                {/* Before */}
                 <div className="flex items-center gap-4 mb-2">
                   <span
                     className="w-12 text-right shrink-0"
@@ -157,8 +153,6 @@ export default function Result() {
                     </span>
                   </div>
                 </div>
-
-                {/* After */}
                 <div className="flex items-center gap-4">
                   <span
                     className="w-12 text-right shrink-0"

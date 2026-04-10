@@ -56,3 +56,54 @@ body {
   border: none;
   border-top: 1px solid var(--color-border);
 }
+
+/* ── Mobile utilities ── */
+@media (max-width: 768px) {
+  .mob-px {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .mob-stack {
+    flex-direction: column !important;
+  }
+  .mob-full {
+    width: 100% !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+  .mob-h1 {
+    font-size: 2.6rem !important;
+  }
+  .mob-h2 {
+    font-size: 2rem !important;
+  }
+  .mob-hide {
+    display: none !important;
+  }
+  .mob-col1 {
+    grid-template-columns: 1fr !important;
+  }
+  .mob-col2 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .mob-gap-sm {
+    gap: 12px !important;
+  }
+  .mob-py-sm {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  .mob-pt-sm {
+    padding-top: 3.5rem !important;
+  }
+  .mob-step-grid {
+    grid-template-columns: 48px 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 52px;
+  }
+}
