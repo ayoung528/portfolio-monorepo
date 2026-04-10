@@ -3,7 +3,7 @@ import './globals.css';
 import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
-  title: '모노레포 전환 — 포트폴리오',
+  title: '포트폴리오 - 정아영',
   description: '멀티레포에서 모노레포로, 100개 컴포넌트 라이브러리 전환기',
 };
 
