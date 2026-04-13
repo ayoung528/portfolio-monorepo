@@ -3,25 +3,23 @@
 const metrics = [
   {
     label: 'Parsed Size',
-    before: 380,
-    after: 310,
+    before: 1040,
+    after: 790,
     unit: 'KB',
-    change: '−70KB',
+    change: '−250KB',
     positive: true,
   },
   {
     label: 'Stat Size',
-    before: 220,
-    after: 220.09,
-    unit: 'KB',
-    change: '+0.09KB',
-    positive: false,
-    note: '실질적 영향 없음',
+    before: 3.31,
+    after: 1.51,
+    unit: 'MB',
+    change: '−1.80MB',
+    positive: true,
   },
 ];
 
 export default function Result() {
-  const maxVal = 420;
   return (
     <section
       className="px-16 mob-px py-20 mob-py-sm"
@@ -53,7 +51,7 @@ export default function Result() {
               marginBottom: '2.5rem',
             }}
           >
-            트리쉐이킹 적용 전후, ERB 모듈의 실제 번들 사이즈 변화입니다.
+            모노레포 적용 전후, ERB 모듈의 실제 번들 사이즈 변화입니다.
           </p>
           <div
             className="rounded-2xl p-7"
@@ -67,7 +65,7 @@ export default function Result() {
                 lineHeight: 1,
               }}
             >
-              −70KB
+              −250KB
             </p>
             <p
               style={{
@@ -83,8 +81,10 @@ export default function Result() {
 
         {/* 오른쪽 */}
         <div className="flex-1 mob-full flex flex-col gap-10 pt-2">
-          {metrics.map(
-            ({ label, before, after, unit, change, positive, note }) => (
+          {metrics.map(({ label, before, after, unit, change, positive }) => {
+            // 각 항목의 before 값을 100%로 기준 삼아 비율 계산
+            const afterRatio = (after / before) * 100;
+            return (
               <div key={label}>
                 <div className="flex items-center justify-between mb-4">
                   <span
@@ -96,32 +96,20 @@ export default function Result() {
                   >
                     {label}
                   </span>
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="rounded-full px-3 py-1"
-                      style={{
-                        fontSize: '0.72rem',
-                        background: positive
-                          ? '#E6F0E9'
-                          : 'var(--color-surface)',
-                        color: positive ? '#2A6B3A' : 'var(--color-ink-muted)',
-                        fontWeight: 500,
-                      }}
-                    >
-                      {change}
-                    </span>
-                    {note && (
-                      <span
-                        style={{
-                          fontSize: '0.7rem',
-                          color: 'var(--color-ink-faint)',
-                        }}
-                      >
-                        {note}
-                      </span>
-                    )}
-                  </div>
+                  <span
+                    className="rounded-full px-3 py-1"
+                    style={{
+                      fontSize: '0.72rem',
+                      background: '#E6F0E9',
+                      color: '#2A6B3A',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {change}
+                  </span>
                 </div>
+
+                {/* Before */}
                 <div className="flex items-center gap-4 mb-2">
                   <span
                     className="w-12 text-right shrink-0"
@@ -136,7 +124,7 @@ export default function Result() {
                     <div
                       className="h-full rounded-lg"
                       style={{
-                        width: `${(before / maxVal) * 100}%`,
+                        width: '100%',
                         background: 'var(--color-surface)',
                         border: '1px solid var(--color-border)',
                       }}
@@ -153,6 +141,8 @@ export default function Result() {
                     </span>
                   </div>
                 </div>
+
+                {/* After */}
                 <div className="flex items-center gap-4">
                   <span
                     className="w-12 text-right shrink-0"
@@ -167,19 +157,17 @@ export default function Result() {
                     <div
                       className="h-full rounded-lg"
                       style={{
-                        width: `${(after / maxVal) * 100}%`,
-                        background: positive
-                          ? '#D4EAD8'
-                          : 'var(--color-surface)',
-                        border: `1px solid ${positive ? '#A8D4AE' : 'var(--color-border)'}`,
+                        width: `${afterRatio}%`,
+                        background: '#D4EAD8',
+                        border: '1px solid #A8D4AE',
                       }}
                     />
                     <span
                       className="absolute left-3"
                       style={{
                         fontSize: '0.72rem',
-                        color: positive ? '#2A6B3A' : 'var(--color-ink-muted)',
-                        fontWeight: positive ? 600 : 400,
+                        color: '#2A6B3A',
+                        fontWeight: 600,
                       }}
                     >
                       {after}
@@ -188,8 +176,8 @@ export default function Result() {
                   </div>
                 </div>
               </div>
-            ),
-          )}
+            );
+          })}
         </div>
       </div>
     </section>
