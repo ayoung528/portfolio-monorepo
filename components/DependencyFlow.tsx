@@ -306,7 +306,7 @@ export default function DependencyFlow() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {[
             '단일 소스 · React 버전 충돌 해소',
-            '트리쉐이킹 적용 · Parsed size −70KB',
+            '트리쉐이킹 적용 · Parsed size −250KB',
           ].map((text) => (
             <div
               key={text}
